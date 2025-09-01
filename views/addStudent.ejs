@@ -1,0 +1,85 @@
+<%- include('./base/header.ejs') %>
+
+<%- include('./base/nav.ejs') %>
+
+<div class="container">
+    <div class="alert text-center bg-primary my-3 " style="color:white">
+        <h4>Add Student</h4>
+    </div>
+</div>
+
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <form action="/add/student" method="post" enctype="multipart/form-data">
+                 <div>
+                    <label class="form-label" >Roll NO</label>
+                    <input type="text" class="form-control"name="rollNo" pattern="[A-Za-z0-9]+"></input>
+                </div>
+                 <div>
+                    <label class="form-label" >Student Name</label>
+                    <input type="text" class="form-control" name="studentName"></input>
+                </div>
+                <div>
+                    <label class="form-label" >Father Name</label>
+                    <input type="text" class="form-control" name="fatherName"></input>
+                </div>
+                <div>
+                    <label class="form-label" >Course</label>
+                    <select class="form-select" name="course">
+                        <option selected>Choose Course</option>
+                        <option value="b tech">B-Tech</option>
+                        <option value="m tech">M-Tech</option>
+                        <option value="mca">MCA</option>
+                        <option value="bca">BCA</option>
+                        <option value="b pharma">B-PHARMA</option>
+                        <option value="d pharma">D-PHARMA</option>
+                        </select>
+                    <!-- <input type="text" class="form-control" name="course"></input> -->
+                </div>
+                <div>
+                    <label class="form-label" >Branch</label>
+                    <select class="form-select" name="branch" >
+                        <option selected>Choose Branch</option>
+                        <option value="cs">CS</option>
+                        <option value="it">IT</option>
+                        <option value="ec">EC</option>
+                        <option value="ece">ECE</option>
+                        <option value="ee">EE</option>
+                        <option value="ai">AI</option>
+                        <option value="cloud">Cloud</option>
+                        <option value="medical">Medical</option>
+                        <option value="ds">Data Science</option>
+                        <option value="ml">Machine Learning</option>
+                        </select>
+                    <!-- <input type="text" class="form-control" name="branch"></input> -->
+                </div>
+                <div>
+                    <label class="form-label" >Admisson Year</label>
+                    <select class="form-select" name="yearOfAdmisson">
+                        <option selected>Choose Admisson Year</option>
+                        <option value="2026">2026</option>
+                        <option value="2025">2025</option>
+                        <option value="2024">2024</option>
+                        <option value="2023">2023</option>
+                        <option value="2022">2022</option>
+                        <option value="2021">2021</option>
+                        <option value="2020">2020</option>
+                        <option value="2019">2019</option>
+                        <option value="2018">2018</option>
+                        </select>
+                    <!-- <input type="text" class="form-control" name="yearOfAdmisson"></input> -->
+                </div>
+                <div>
+                    <label class="form-label" >Select Student Image</label>
+                    <input type="file" class="form-control" name="studentImage"></input>
+                </div>
+                <input type="submit" value="Add Student" class="btn btn-warning w-100 my-3">
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+<%- include('./base/footer.ejs') %>

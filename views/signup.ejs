@@ -1,0 +1,41 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+    <div class="alert text-center bg-primary my-3 " style="color:white">
+        <h4>Sign Up Form</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"></div>
+        <div class="col">
+            <form action="/add/user" method="post">
+                 <div>
+                    <label class="form-label" >First Name</label>
+                    <input type="text" class="form-control"name="firstName"></input>
+                </div>
+                 <div>
+                    <label class="form-label" >Last Name</label>
+                    <input type="text" class="form-control" name="lastName"></input>
+                </div>
+                <div>
+                    <label class="form-label" >Email</label>
+                    <input type="text" class="form-control" name="email"></input>
+                </div>
+                <div>
+                    <label class="form-label" >Password</label>
+                    <input type="password" class="form-control" name="password"></input>
+                </div>
+                <input type="submit" value="Sign Up" class="btn btn-warning w-100 my-3">
+                <div>
+                    <a href="/"  class="btn btn-danger w-100 my-3" >Login</a>
+                </div>
+
+            </form>
+        </div>
+        <div class="col"></div>
+    </div>
+</div>
+
+
+<%- include('./base/footer.ejs') %>
+  

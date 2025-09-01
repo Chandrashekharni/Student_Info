@@ -1,0 +1,46 @@
+<%- include('./base/header.ejs') %>
+<%- include('./base/nav.ejs') %>
+<div class="container">
+     <div class="alert text-center bg-primary my-3 " style="color:white">
+        <h4>Student List</h4>
+    </div>
+</div>
+
+<div class="container">
+    <table class="table text-center">
+        <th>
+            <tr>
+                <th>Student Photo</th>
+                <th> Roll No</th>
+                <th> Student Name</th>
+                <th> Father Name</th>
+                <th> Course</th>
+                <th> Branch</th>
+                <th> Actions</th>
+            </tr>
+        </th>
+        <tbody>
+            <% students.forEach((student) => { %>
+                <tr>
+                    <td><img src="<%= student.studentImage %>" alt="Student Image" width="50px" height="50px"></td>
+                    <td> <%= student.rollNo %> </td>
+                    <td> <%= student.studentName %> </td>
+                    <td> <%= student.fatherName %> </td>
+                    <td> <%= student.course %> </td>
+                    <td> <%= student.branch %> </td>
+                    <td>
+                        <a href="/edit/student/page/<%= student._id %>" class="btn btn-warning">Edit</a> 
+                         <a href="/delete/student/<%= student._id %>" class="btn btn-danger">Delete</a>
+                    </td>
+                    
+                </tr>
+                
+          <%  }) %>
+        </tbody>
+
+    </table>
+</div>
+
+
+
+<%- include('./base/footer.ejs') %>

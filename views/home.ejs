@@ -1,0 +1,35 @@
+<%- include('./base/header.ejs') %>
+<div class="container">
+    <div class="alert text-center bg-primary my-3 " style="color:white">
+        <h4>Login Form</h4>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="col"> </div>
+        <div class="col">
+            <form action="/login " method="post">
+                <div>
+                    <label class="form-label" >Email</label>
+                    <input type="text" class="form-control" name="email">
+                </div>
+                <div>
+                    <label class="form-label" >Password</label>
+                    <input type="password" class="form-control" name="password">
+                </div>
+                <input type="submit" value="Login" class="btn btn-warning w-100 my-3">
+                <div>
+                    <a href="/user/signup"  class="btn btn-danger w-100 my-3" >Sign Up</a>
+                </div>
+
+            </form>
+        </div>
+        <div class="col"> </div>
+        
+    </div>
+</div>
+
+
+
+<%- include('./base/footer.ejs') %>
+  
